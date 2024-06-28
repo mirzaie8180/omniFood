@@ -33,6 +33,8 @@ Paragraf-default: 1.6
 #cf711f
 - Accents:
 - Greys:
+#888
+#767676   (Lightest grey allowed on #fff)
 #6f6f6f   (Lightest grey allowed on #fdf2e9)
 #555
 #333
@@ -127,6 +129,10 @@ Spacing system (px)
 
 .grid--4-cols {
 	grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--5-cols {
+	grid-template-columns: repeat(5, 1fr);
 }
 
 .grid--center-v {
