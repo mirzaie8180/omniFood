@@ -26,15 +26,27 @@ Paragraf-default: 1.6
 - Tints: 
 #fdf2e9
 #fae5d3
+#eb984e
 
-- Shades: #cf711f
+- Shades:
+#45260a
+#cf711f
 - Accents:
 - Greys:
 #6f6f6f   (Lightest grey allowed on #fdf2e9)
 #555
 #333
 
+websites:
+maketintsandshades.com
+google fonts
+color contrast checker
+ionicons
+open color
+
 --- 05 SHADOWS
+
+box-shadow: 0 2.4rem 4.8rem rgba(0,0,0,0.075);
 
 --- 06 BORDER-RADIUS
 DEFAULT: 9px
@@ -159,12 +171,18 @@ Spacing system (px)
 	letter-spacing: 0.75px;
 }
 
+.btn,
 .btn:link,
 .btn:visited {
 	text-decoration: none;
 	font-size: 2rem;
 	padding: 1.6rem 3.2rem;
 	border-radius: 9px;
+
+	/* only necessary for .btn */
+	border: none;
+	cursor: pointer;
+
 	display: inline-block;
 	font-weight: 600;
 	/* put transition on original state */
@@ -192,6 +210,18 @@ Spacing system (px)
 .btn--outline:active {
 	background-color: #fdf2e9;
 	box-shadow: inset 0 0 0 3px #fff;
+}
+
+.btn--form {
+	background-color: #45260a;
+	color: #fdf2e9;
+	align-self: end;
+	padding: 1.2rem;
+}
+
+.btn--form:hover {
+	background-color: #fff;
+	color: #555;
 }
 
 .link:link ,
@@ -228,6 +258,14 @@ Spacing system (px)
 	width: 3rem;
 	height: 3rem;
 	color: #e67e22;
+}
+
+*:focus {
+	outline: none;
+	/* outline: 4px dotted #e67e22;
+	outline-offset: 8px; */
+
+	box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
 }
 
 /* HELPER/SETTINGS CLASSES */
